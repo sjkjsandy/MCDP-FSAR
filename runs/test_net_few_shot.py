@@ -269,14 +269,6 @@ def test_few_shot(cfg):
         pass
     else:
         writer = None
-
-    #--------------------andy---新增提示学习模型------2024.12.2---
-    # cocoop = initcocoop()
-    # a = cocoop.dm.dataset.classnames
-    # model.class_real_train_index = [a.index(item) for item in cfg.TRAIN.CLASS_NAME]
-    # model.class_real_test_index = [a.index(item) for item in cfg.TEST.CLASS_NAME]
-    #--------------------andy---新增提示学习模型------2024.12.2---
-
     cur_epoch = 0
     test_epoch(
         val_loader, model, val_meter, cur_epoch,  cfg, writer
